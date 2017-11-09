@@ -1,0 +1,19 @@
+.splash.nav .greeting {
+  margin-top: .5em;
+  font-size: 1.25em;
+
+  &:after {
+    transition-property: all;
+    transition-duration: $animation-timing*2;
+    transition-timing-function: $animation-ease;
+
+    transform: rotateX(0deg);
+    font-size: 1em;
+    text-shadow: 0px 0px 0px transparent;
+    bottom: 0;
+  }
+
+  &:hover {
+    margin-top: .5em;
+  }
+}

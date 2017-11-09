@@ -1,0 +1,17 @@
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/fonts';
+@import 'partials/components';
+@import 'partials/responsive-framework';
+@import 'partials/nav';
+@import 'partials/splash';
+
+main {
+  overflow: hidden;
+  height: 100%;
+
+  h1 {
+    text-align: center;
+    &:first-of-type { margin: 0; }
+  }
+}
