@@ -1,0 +1,137 @@
+.home {
+  background-color: $background-color-home;
+  transition: background-color $animation-timing $animation-ease;
+  > #page {
+    @extend .inline-layout;
+    width: calc(#{$stripe-container-width} + 50%);
+    @include sm { width: calc(#{$stripe-container-width/2} + 50%)}
+    @include xs { width: 100%; }
+    margin: 0 auto;
+
+    box-shadow: 0px 0px 0px 0px transparent;
+    transition: box-shadow $animation-timing $animation-ease;
+
+    &.live {
+      box-shadow: 0px 3px 2px 2px $background-color-home;
+      transition: box-shadow $animation-timing $animation-ease;
+    }
+  }
+
+}
+
+aside.virginia-stripes {
+  width: $stripe-container-width;
+  @include sm { width: $stripe-container-width/2; }
+  @include xs { width: 0; transition: width $animation-timing $animation-ease; }
+
+  box-shadow: $slim-stripes;
+  @include sm { box-shadow: $slim-stripes-sm; }
+
+  transition: box-shadow $animation-timing $animation-ease,
+              width $animation-timing $animation-ease;
+
+}
+
+.virginia-stripes {
+  @extend .pseudo-clone-after;
+  &:after {
+    background-image: url('../images/asfalt-light.png');
+    background-size: 50%;
+  }
+  &.closed {
+    box-shadow: $slim-stripes-closed;
+    transition: box-shadow $animation-timing $animation-ease;
+  }
+}
+
+header.virginia-stripes {
+  height: 0;
+  @include xs { height: $stripe-container-width/2; }
+  box-shadow: $slim-stripes-closed;
+  @include xs { box-shadow: $slim-stripes-xs; }
+
+  transition: height $animation-timing $animation-ease,
+              box-shadow $animation-timing $animation-ease;
+  @include xs {
+    transition: height $animation-timing $animation-ease,
+                box-shadow $animation-timing $animation-ease;
+  }
+}
+
+$nav-padding-top: 5px;
+.content-area {
+  width: calc(100% - #{$stripe-container-width});
+  @include sm { width: calc(100% - #{$stripe-container-width/2}); }
+  @include xs { width: 100%; }
+
+  height: auto;
+  @include xs { height: calc(100% - #{$stripe-container-width/2}); }
+
+  opacity: 1;
+  transition: opacity $animation-timing $animation-ease;
+
+  background-color: $background-color-content;
+
+  @extend .pseudo-clone-after;
+  &:after {
+    background-image: $content-area-backgrounds;
+    @extend .content-area-background-scheme;
+  }
+
+  &.invisible {
+    opacity: 0;
+    transition: opacity $animation-timing $animation-ease;
+  }
+
+  position: relative;
+
+  > .slim-logo {
+    text-align: right;
+    padding: .1em .25em 0 0;
+  }
+
+  > nav {
+    margin: 0 5%;
+    margin-top: calc(50vh - #{$logo-slim-height}*2);
+    @include xs { margin-top: calc((100vh - #{$stripe-container-width}/2)/2 - #{$logo-slim-height}*2)}
+    transition: margin-top $animation-timing $animation-ease;
+
+    border-top: 1px dotted $brown;
+
+    padding-top: $nav-padding-top;
+
+    &.active {
+      margin-top: 0;
+      transition: margin-top $animation-timing $animation-ease;
+    }
+
+    > ul > li {
+      margin: 5px .75em;
+      @include sm { margin: 5px .25em; }
+      font-size: 1em;
+      @include sm { font-size: .75em; }
+    }
+
+  }
+}
+
+//article layout
+.article .content-area {
+  > nav {
+    margin-top: 0;
+  }
+  > .scroll-mask {
+    max-height: calc(100vh - 6em);
+    overflow-y: hidden;
+    @include shadow-mask($background-color-content, 4%);
+    // &:after { @extend .content-area-background-scheme; }
+  }
+  article {
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: auto;
+    max-height: calc(100vh - 6em);
+    @include xs { max-height: calc((100vh - #{$stripe-container-width}/2) - 6em); }
+    padding-right: 10px;
+  }
+}

@@ -1,17 +1,14 @@
-@import 'partials/reset';
-@import 'partials/variables';
 @import 'partials/fonts';
-@import 'partials/components';
+@import 'partials/reset';
 @import 'partials/responsive-framework';
+@import 'partials/variables';
+@import 'partials/basics';
+@import 'partials/scrollbar';
+@import 'partials/components';
+@import 'partials/v-slim';
+@import 'partials/logo';
 @import 'partials/nav';
 @import 'partials/splash';
-
-main {
-  overflow: hidden;
-  height: 100%;
-
-  h1 {
-    text-align: center;
-    &:first-of-type { margin: 0; }
-  }
-}
+@import 'partials/home';
+@import 'partials/content';
+@import 'partials/music';

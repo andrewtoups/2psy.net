@@ -1,0 +1,135 @@
+$stripe-0-color: $background-color-content;
+$stripe-0-width:                   2px;
+$stripe-0-width-sm:                (2px)/2;
+
+$stripe-1-color: $v-slim-gold;
+$stripe-1-width: $stripe-0-width + 20px;
+$stripe-1-width-sm: ($stripe-0-width + 20px)/2;
+
+$stripe-2-color: $v-slim-maroon-fade;
+$stripe-2-width: $stripe-1-width + 32px;
+$stripe-2-width-sm: ($stripe-1-width + 32px)/2;
+
+$stripe-3-color: $v-slim-gold-fade;
+$stripe-3-width: $stripe-2-width + 26px;
+$stripe-3-width-sm: ($stripe-2-width + 26px)/2;
+
+$stripe-4-color: $v-slim-mustard;
+$stripe-4-width: $stripe-3-width + 82px;
+$stripe-4-width-sm: ($stripe-3-width + 82px)/2;
+
+$stripe-5-color: $v-slim-maroon-deep;
+$stripe-5-width: $stripe-4-width + 28px;
+$stripe-5-width-sm: ($stripe-4-width + 28px)/2;
+
+$stripe-6-color: $v-slim-gold-fade;
+$stripe-6-width: $stripe-5-width + 26px;
+$stripe-6-width-sm: ($stripe-5-width + 26px)/2;
+
+$stripe-7-color: $v-slim-red;
+$stripe-7-width: $stripe-6-width + 70px;
+$stripe-7-width-sm: ($stripe-6-width + 70px)/2;
+
+$stripe-8-color: $v-slim-maroon-deep;
+$stripe-8-width: $stripe-7-width + 4px;
+$stripe-8-width-sm: ($stripe-7-width + 4px)/2;
+
+$stripe-9-color: $v-slim-red-fade;
+$stripe-9-width: $stripe-8-width + 32px;
+$stripe-9-width-sm: ($stripe-8-width + 32px)/2;
+
+$stripe-container-width: $stripe-9-width - $stripe-0-width;
+
+$stripe-blur: 1px;
+
+$slim-stripe-0: inset (-$stripe-0-width) 0px $stripe-blur (-$stripe-blur) $stripe-0-color;
+$slim-stripe-1: inset (-$stripe-1-width) 0px $stripe-blur (-$stripe-blur) $stripe-1-color;
+$slim-stripe-2: inset (-$stripe-2-width) 0px $stripe-blur (-$stripe-blur) $stripe-2-color;
+$slim-stripe-3: inset (-$stripe-3-width) 0px $stripe-blur (-$stripe-blur) $stripe-3-color;
+$slim-stripe-4: inset (-$stripe-4-width) 0px $stripe-blur (-$stripe-blur) $stripe-4-color;
+$slim-stripe-5: inset (-$stripe-5-width) 0px $stripe-blur (-$stripe-blur) $stripe-5-color;
+$slim-stripe-6: inset (-$stripe-6-width) 0px $stripe-blur (-$stripe-blur) $stripe-6-color;
+$slim-stripe-7: inset (-$stripe-7-width) 0px $stripe-blur (-$stripe-blur) $stripe-7-color;
+$slim-stripe-8: inset (-$stripe-8-width) 0px $stripe-blur (-$stripe-blur) $stripe-8-color;
+$slim-stripe-9: inset (-$stripe-9-width) 0px $stripe-blur (-$stripe-blur) $stripe-9-color;
+
+$slim-stripe-0-sm: inset (-$stripe-0-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-0-color;
+$slim-stripe-1-sm: inset (-$stripe-1-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-1-color;
+$slim-stripe-2-sm: inset (-$stripe-2-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-2-color;
+$slim-stripe-3-sm: inset (-$stripe-3-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-3-color;
+$slim-stripe-4-sm: inset (-$stripe-4-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-4-color;
+$slim-stripe-5-sm: inset (-$stripe-5-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-5-color;
+$slim-stripe-6-sm: inset (-$stripe-6-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-6-color;
+$slim-stripe-7-sm: inset (-$stripe-7-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-7-color;
+$slim-stripe-8-sm: inset (-$stripe-8-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-8-color;
+$slim-stripe-9-sm: inset (-$stripe-9-width-sm) 0px $stripe-blur (-$stripe-blur) $stripe-9-color;
+
+$slim-stripe-0-xs: inset 0px (-$stripe-0-width-sm) $stripe-blur (-$stripe-blur) $stripe-0-color;
+$slim-stripe-1-xs: inset 0px (-$stripe-1-width-sm) $stripe-blur (-$stripe-blur) $stripe-1-color;
+$slim-stripe-2-xs: inset 0px (-$stripe-2-width-sm) $stripe-blur (-$stripe-blur) $stripe-2-color;
+$slim-stripe-3-xs: inset 0px (-$stripe-3-width-sm) $stripe-blur (-$stripe-blur) $stripe-3-color;
+$slim-stripe-4-xs: inset 0px (-$stripe-4-width-sm) $stripe-blur (-$stripe-blur) $stripe-4-color;
+$slim-stripe-5-xs: inset 0px (-$stripe-5-width-sm) $stripe-blur (-$stripe-blur) $stripe-5-color;
+$slim-stripe-6-xs: inset 0px (-$stripe-6-width-sm) $stripe-blur (-$stripe-blur) $stripe-6-color;
+$slim-stripe-7-xs: inset 0px (-$stripe-7-width-sm) $stripe-blur (-$stripe-blur) $stripe-7-color;
+$slim-stripe-8-xs: inset 0px (-$stripe-8-width-sm) $stripe-blur (-$stripe-blur) $stripe-8-color;
+$slim-stripe-9-xs: inset 0px (-$stripe-9-width-sm) $stripe-blur (-$stripe-blur) $stripe-9-color;
+
+$slim-stripes:
+$slim-stripe-0,
+$slim-stripe-1,
+$slim-stripe-2,
+$slim-stripe-3,
+$slim-stripe-4,
+$slim-stripe-5,
+$slim-stripe-6,
+$slim-stripe-7,
+$slim-stripe-8,
+$slim-stripe-9;
+
+$slim-stripes-sm:
+$slim-stripe-0-sm,
+$slim-stripe-1-sm,
+$slim-stripe-2-sm,
+$slim-stripe-3-sm,
+$slim-stripe-4-sm,
+$slim-stripe-5-sm,
+$slim-stripe-6-sm,
+$slim-stripe-7-sm,
+$slim-stripe-8-sm,
+$slim-stripe-9-sm;
+
+$slim-stripes-xs:
+$slim-stripe-0-xs,
+$slim-stripe-1-xs,
+$slim-stripe-2-xs,
+$slim-stripe-3-xs,
+$slim-stripe-4-xs,
+$slim-stripe-5-xs,
+$slim-stripe-6-xs,
+$slim-stripe-7-xs,
+$slim-stripe-8-xs,
+$slim-stripe-9-xs;
+
+$slim-stripe-0-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-0-color;
+$slim-stripe-1-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-1-color;
+$slim-stripe-2-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-2-color;
+$slim-stripe-3-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-3-color;
+$slim-stripe-4-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-4-color;
+$slim-stripe-5-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-5-color;
+$slim-stripe-6-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-6-color;
+$slim-stripe-7-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-7-color;
+$slim-stripe-8-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-8-color;
+$slim-stripe-9-closed: inset 0px 0px $stripe-blur (-$stripe-blur) $stripe-9-color;
+
+$slim-stripes-closed:
+$slim-stripe-0-closed,
+$slim-stripe-1-closed,
+$slim-stripe-2-closed,
+$slim-stripe-3-closed,
+$slim-stripe-4-closed,
+$slim-stripe-5-closed,
+$slim-stripe-6-closed,
+$slim-stripe-7-closed,
+$slim-stripe-8-closed,
+$slim-stripe-9-closed;

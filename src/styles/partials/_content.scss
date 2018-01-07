@@ -1,0 +1,35 @@
+.content-area article {
+  font-size: 2em;
+
+  h1, h2, {
+    text-align: center;
+    color: saturate($v-slim-red, 75%);
+    font-style: italic;
+    @include stain($background-color-content);
+  }
+
+  h3, h4, h5, h6 {
+    color: darken($v-slim-red, 20%);
+    text-align: left;
+    padding-left: .25em;
+    text-shadow: 0px 1px 0px $v-slim-gold;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  ul {
+    list-style: circle;
+    padding-left: 1em;
+  }
+
+  a {
+    color: $v-slim-red;
+    transition: text-shadow $animation-timing/3 $animation-ease;
+    &:hover {
+      text-shadow: 0px 1px 0px $v-slim-maroon-deep;
+      transition: text-shadow $animation-timing/3 $animation-ease;
+    }
+  }
+}
