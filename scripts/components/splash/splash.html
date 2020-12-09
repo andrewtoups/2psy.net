@@ -1,0 +1,28 @@
+<div id="page" data-bind="css: {live: animationComplete}, animationStep: pageEl">
+  <!-- ko if: splash -->
+  <header>
+    <h1>
+      <a class="logo greeting" data-content="💋 2psy.net 💋" href="/home" data-bind="animationTrigger: animations, animationStep: greeting">
+        💋 2psy.net 💋
+      </a>
+    </h1>
+  </header>
+  <!-- /ko -->
+  <!-- ko if: "loadHome" -->
+  <aside class="virginia-stripes closed" data-bind="animationStep: stripes"></aside>
+
+  <main class="content-area invisible" data-bind="animationStep: content">
+      <h1 class="slim-logo"><a href="/home" data-bind="click: vm.currentRoute.bind($data, '/home')">2psy</a></h1>
+      <!-- ko if: vm.registry().includes('navi') -->
+      <!-- ko component: "navi" -->
+      <!-- /ko -->
+      <!-- /ko -->
+      <div class="scroll-mask">
+        <!-- ko if: vm.contentReady -->
+        <!-- ko component: vm.currentComponent -->
+        <!-- /ko -->
+        <!-- /ko -->
+      </div>
+  </main>
+  <!-- /ko -->
+</div>  
