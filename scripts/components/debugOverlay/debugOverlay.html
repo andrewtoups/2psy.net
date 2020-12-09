@@ -1,0 +1,51 @@
+<style>
+    #debug {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        background-color: rgba(255,255,255,.75);
+        padding: 15px;
+        border: solid black 3px;
+        border-radius: 5px;
+        z-index: 1000000;
+        font-family: monospace;
+    }
+    #debug thead {
+        font-size: .75em;
+        font-weight: normal;
+    }
+    #debug tbody td:nth-child(1){
+        text-decoration: italic;
+    }
+    #debug tbody td:nth-child(2){
+        font-weight: bold;
+        background-color: chocolate;
+        color: white;
+    }
+</style>
+<div id="debug">
+    <fieldset>
+        <label>Choose component: </label>
+        <select data-bind="options: vms, value: viewModel"></select>
+    </fieldset>
+    <table>
+    <!-- ko foreach: tables -->
+    <!-- ko foreach: tables -->
+    <!-- ko if: $component[type]().length && (type === 'Value' || type === 'State' || type === 'Variable')-->
+        <thead>
+            <tr>
+                <th data-bind="text: type"></th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: $component[type]">
+            <tr>
+                <td data-bind="text: obs"></td>
+                <td data-bind="text: val"></td>
+            </tr>
+        </tbody>
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+    </table>
+</div>
