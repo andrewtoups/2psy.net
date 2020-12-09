@@ -15070,7 +15070,7 @@ function initPage(){
     
     $('header h1').find('.greeting').addClass('active');
     utils.transitionChain('.splash', '.greeting.active', 'opacity', function(){
-      $('header').empty().addClass('virginia-stripes closed');
+      $('header').empty();
       launchMain();
     });
 
@@ -15085,6 +15085,7 @@ function launchMain(){
   //change page class to home and add layout elements:
   $('body').removeClass('splash').addClass('home');
   aside = $(aside).insertAfter('header').addClass('closed');
+  $('header').remove();
   contentArea = $(contentArea).insertAfter('aside').addClass('invisible');
   $(nav).appendTo('.content-area');
   navs = $('nav a');
@@ -15092,7 +15093,6 @@ function launchMain(){
   //wait for next frame to trigger stripe animation:
   utils.wait(function(){
     aside.removeClass('closed');
-    $('header').removeClass('closed');
   }, 20);
   utils.transitionChain('.home', 'virginia-stripes', 'box-shadow', function(){
     contentArea.removeClass('invisible');
