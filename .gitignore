@@ -5,3 +5,6 @@ node_modules
 .DS-Store
 Gruntfile.js
 package.json
+.ftpconfig
+.ftpignore
+package-lock.json
