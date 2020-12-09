@@ -8,3 +8,4 @@ package.json
 .ftpconfig
 .ftpignore
 package-lock.json
+/files
