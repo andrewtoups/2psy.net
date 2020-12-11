@@ -1,13 +1,13 @@
-  <!-- ko if: splash -->
-  <header>
-<div id="page" data-bind="css: {live: animationComplete}, transitionStep: pageEl">
+<div id="page" data-bind="css: {live: home}, transitionStep: pageEl">
+  <!-- !ko if: showSplash -->
+  <header data-bind="visible: showSplash">
     <h1>
       <a class="logo greeting" data-content="💋 2psy.net 💋" href="/home" data-bind="click: loadNavi, transitionStep: greeting">
         💋 2psy.net 💋
       </a>
     </h1>
   </header>
-  <!-- /ko -->
+  <!-- !/ko -->
   <!-- ko if: "loadHome" -->
   <aside class="virginia-stripes closed" data-bind="transitionStep: stripes"></aside>
 
