@@ -1,17 +1,17 @@
-<div id="page" data-bind="css: {live: animationComplete}, animationStep: pageEl">
   <!-- ko if: splash -->
   <header>
+<div id="page" data-bind="css: {live: animationComplete}, transitionStep: pageEl">
     <h1>
-      <a class="logo greeting" data-content="💋 2psy.net 💋" href="/home" data-bind="animationTrigger: animations, animationStep: greeting">
+      <a class="logo greeting" data-content="💋 2psy.net 💋" href="/home" data-bind="click: loadNavi, transitionStep: greeting">
         💋 2psy.net 💋
       </a>
     </h1>
   </header>
   <!-- /ko -->
   <!-- ko if: "loadHome" -->
-  <aside class="virginia-stripes closed" data-bind="animationStep: stripes"></aside>
+  <aside class="virginia-stripes closed" data-bind="transitionStep: stripes"></aside>
 
-  <main class="content-area invisible" data-bind="animationStep: content">
+  <main class="content-area invisible" data-bind="transitionStep: content">
       <h1 class="slim-logo"><a href="/home" data-bind="click: vm.currentRoute.bind($data, '/home')">2psy</a></h1>
       <!-- ko if: vm.registry().includes('navi') -->
       <!-- ko component: "navi" -->

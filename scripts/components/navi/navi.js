@@ -1,10 +1,9 @@
 define([
     'ko',
-    'utils/animationStep',
-    'utils/animationTrigger'
-], function(ko, animationStep, animationTrigger){
-    ko.bindingHandlers.animationStep = animationStep;
-    ko.bindingHandlers.animationTrigger = animationTrigger;
+    'utils/transitionStep',
+    'utils/transitions'
+], function(ko, transitionStep, transitions){
+    ko.bindingHandlers.transitionStep = transitionStep;
 
     return function (){
         var self = this;

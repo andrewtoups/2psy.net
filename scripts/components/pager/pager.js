@@ -1,7 +1,7 @@
-define(['ko', 'utils/animationStep'], function(ko, animationStep){
+define(['ko', 'utils/transitionStep'], function(ko, transitionStep){
     return function(){
         var self = this;
-        ko.bindingHandlers.animationStep = animationStep;
+        ko.bindingHandlers.transitionStep = transitionStep;
 
         self.body = ko.observableArray([{
             action: 'add',

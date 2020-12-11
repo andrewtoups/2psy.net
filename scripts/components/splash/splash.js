@@ -1,10 +1,9 @@
 define([
     'ko',
-    'utils/animationStep',
-    'utils/animationTrigger'
-], function(ko, animationStep, animationTrigger){
-    ko.bindingHandlers.animationStep = animationStep;
-    ko.bindingHandlers.animationTrigger = animationTrigger;
+    'utils/transitionStep',
+    'utils/transitions'
+], function(ko, transitionStep, transitions){
+    ko.bindingHandlers.transitionStep = transitionStep;
 
     return function (){
         var self = this;
@@ -24,7 +23,7 @@ define([
             action: 'remove',
             class: 'invisible'
         }];
-        self.animations = {
+        self.transitions = {
             steps: [self.greeting, self.body(), self.stripes, self.content],
             onClick: () => { vm.loadComponent('navi'); },
             eachStep: (index) => { self.animationPhase(index + 1) },
@@ -34,6 +33,7 @@ define([
                 self.dispose();
             }
         };
+        transitions(self.transitions);
 
         self.pageEl = ko.observableArray([{
             action: 'add',

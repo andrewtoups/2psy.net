@@ -1,7 +1,7 @@
-<nav data-bind="animationStep: nav">
+<nav data-bind="transitionStep: nav">
   <ul data-bind="foreach: vm.contentPages">
     <li>
-      <a data-bind="text: title, attr: {href: url}, animationTrigger: $parent.animation, click: vm.currentRoute.bind($data, url), css: {active: vm.currentRoute() === url && $parent.isActive}"></a>
+      <a data-bind="text: title, attr: {href: url}, click: vm.currentRoute.bind($data, url), css: {active: vm.currentRoute() === url && $parent.isActive}"></a>
     </li>
   </ul>
 </nav>
