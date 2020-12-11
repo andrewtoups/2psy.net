@@ -6,9 +6,9 @@ define(['ko'], function(ko){
             return vm.registry();
         });
         self.viewModel = ko.observable(vm[self.vms()[0]]);
-        vm.currentComponent.subscribe(newValue => {
-            self.viewModel(newValue);
-        });
+        // vm.currentComponent.subscribe(newValue => {
+        //     self.viewModel(newValue);
+        // });
         self.vmObj = ko.computed(() => self.viewModel() === "vm" ? vm : vm[self.viewModel()]);
         self.data = ko.computed( () => {
             if (typeof self.vmObj() === 'object') {
