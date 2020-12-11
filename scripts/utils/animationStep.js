@@ -1,6 +1,6 @@
 define(['ko'], function(ko){
-    var calculateAnimationTime = function(element, props){
-        var duration, delay;
+    let calculateAnimationTime = function(element, props){
+        let duration, delay;
 
         if (props.action === 'add'){
             //clone element to look ahead:
