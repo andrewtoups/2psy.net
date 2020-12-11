@@ -8,9 +8,11 @@ define([
     return function (){
         var self = this;
 
-        counter4 = logCounter("initializing of splash component", counter4);
-
+        self.splash = ko.observable(true);
+        self.home = ko.observable(false);
+        
         self.greeting = [{
+            when: {state: self.splash, is: false},
             action: 'add',
             class: 'active'
         }];
@@ -20,38 +22,48 @@ define([
             class: 'closed'
         }];
         self.content = [{
+            when: {state: self.home, is: true},
             action: 'remove',
             class: 'invisible'
         }];
         self.transitions = {
             steps: [self.greeting, self.body(), self.stripes, self.content],
-            onClick: () => { vm.loadComponent('navi'); },
-            eachStep: (index) => { self.animationPhase(index + 1) },
-            complete: () => { 
-                self.animationComplete(true);
-                vm.currentRoute('/home');
-                self.dispose();
-            }
+            eachStep: (index) => { self.animationPhase(index + 1) }
         };
         transitions(self.transitions);
+
+        self.loadNavi = function(){
+            if (!vm.registry().includes('navi')) vm.loadComponent('navi');
+            self.splash(!self.splash());
+        };
+
+        ko.when(() => self.home(), function(){
+            vm.currentRoute('/home');
+            self.dispose();
+        });
 
         self.pageEl = ko.observableArray([{
             action: 'add',
             class: 'article'
         }]);
 
-        self.animationPhase = ko.observable(0);
-        self.animationComplete = ko.observable(false);
+        self.animationPhase = ko.observable(1);
 
-        self.splash = ko.computed(function(){
-            return self.animationPhase() < 2;
-        }); 
+        self.showSplash = ko.computed(function(){
+            return self.animationPhase() <= 2;
+        });
         self.loadHome = ko.computed(function(){
-            return self.animationPhase() >= 1;
+            return self.animationPhase() > 1;
+        });
+
+        vm.currentRoute.subscribe(newValue => {
+            if (newValue === '/home') {
+                self.home(true);
+            }
         });
 
         self.dispose = function(){
-            self.splash.dispose();
+            self.showSplash.dispose();
             self.loadHome.dispose();
         }
     };

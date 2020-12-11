@@ -17,7 +17,7 @@
       <!-- ko component: "navi" -->
       <!-- /ko -->
       <!-- /ko -->
-      <div class="scroll-mask">
+      <div class="scroll-mask" data-bind="visible: vm.activeNav">
         <!-- ko if: vm.contentReady -->
         <!-- ko component: vm.currentComponent -->
         <!-- /ko -->

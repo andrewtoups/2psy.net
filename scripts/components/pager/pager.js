@@ -96,9 +96,9 @@ define(['ko', 'utils/transitionStep'], function(ko, transitionStep){
         self.contentReady = ko.computed(function(){
             return self.contentPages.includes(self.currentPage()) &&
                    self.registry().includes(self.currentPage().component) &&
-                   self.currentPage().component === self.currentComponent() &&
-                   self.activeNav();
+                   self.awakeNav();
         });
+        self.awakeNav = ko.observable(false);
         self.activeNav = ko.observable(false);
 
         self.ready = ko.computed(function(){
