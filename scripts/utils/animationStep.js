@@ -31,7 +31,9 @@ define(['ko'], function(ko){
         init: function(element, valueAccessor) {
             let steps = ko.unwrap(valueAccessor());
             steps.forEach((step) => {
+                if (!step.hasOwnProperty('ready')) step.ready = ko.observable(false);
                 let cList = Array.from(element.classList);
+
                 if ((!cList.includes(step.class) && step.action === 'add') ||
                 (cList.includes(step.class) && step.action === 'remove')) {
                     step.timeout = step.hasOwnProperty('timeout') ? step.timeout : calculateAnimationTime(element, step);
@@ -40,6 +42,7 @@ define(['ko'], function(ko){
                 } else {
                     step.timeout = 0;
                 }
+                step.ready(true);
             });
         }
     }
