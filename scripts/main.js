@@ -11,7 +11,7 @@ var logCounter = function(label, counter){
 };
 
 DomReady.ready(function(){
-    define(['ko', 'components/pager/pager', 'utils/animationStep'], function(ko, Pager){
+    define(['ko', 'components/pager/pager'], function(ko, Pager){
         vm = new Pager();
         // ko.options.useOnlyNativeEvents = true;
         ko.applyBindings(vm, document.querySelector('html'));
