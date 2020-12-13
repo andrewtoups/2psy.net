@@ -1,14 +1,9 @@
 <article>
   <h2>Work</h2>
-  <ul>
+  <ul data-bind="foreach: works">
     <li>
-      <h3><a href="http://jamestancill.com" target="_blank">jamestancill.com</a></h3>
-      <p>Portfolio site built on a customized wordpress theme</p>
-    </li>
-    <li>
-      <p>
-        More coming soon... In the meantime, check out my <a href="https://github.com/andrewtoups">Github</a> page.
-      </p>
+      <h3><a data-bind="attr: {href:url}, text: title" target="_blank"></a></h3>
+      <p data-bind="html: caption"></p>
     </li>
   </ul>
 </article>
