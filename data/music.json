@@ -1,0 +1,116 @@
+[
+    {
+      "title": "Death of the Corpse Wizard Soundtrack",
+      "caption": "Music for <a target='_blank' href='https://featurecreeps.itch.io/corpsewizard'>Death of the Corpse Wizard</a>, an ios/android/desktop roguelike <a target='_blank' href='http://procyonic.org'>my brother</a> made.",
+      "tracklist": [{
+          "title": "Theme From Death of the Corpse Wizard",
+          "source": "dist/music/corpse-wizard-theme.mp3"
+      }]
+    },
+    {
+      "title": "10x8 Soundtrack",
+      "caption": "Music for <a href='http://actionbutton.com/10x8/' target='_blank'>Action Button's Ten By Eight</a> for the PS Vita.",
+      "tracklist": [
+        {
+          "title": "10xMenu",
+          "source": "https://2psy.net/dist/music/2psy/ten-by-eight/01-10xmenu.mp3"
+        },
+        {
+          "title": "Zenx8",
+          "source": "https://2psy.net/dist/music/2psy/ten-by-eight/02-zenx8.mp3"
+        },
+        {
+          "title": "10xEndless",
+          "source": "https://2psy.net/dist/music/2psy/ten-by-eight/03-10xendless.mp3"
+        },
+        {
+          "title": "10xInterlude",
+          "source": "https://2psy.net/dist/music/2psy/ten-by-eight/04-10xinterlude.mp3"
+        },
+        {
+          "title": "Mainx8",
+          "source": "https://2psy.net/dist/music/2psy/ten-by-eight/05-mainx8.mp3"
+        },
+        {
+          "title": "Chateau of the Solipsus",
+          "source": "https://2psy.net/dist/music/2psy/ten-by-eight/06-chateau-of-the-solipsus.mp3"
+        }
+      ]
+    },
+    {
+      "title": "Invader Soundtrack",
+      "caption": "Music for <a href='https://w.itch.io/' target='_blank'>Anna Anthropy's</a> Invader, which sadly does not seem to be hosted online anymore. This is the first soundtrack I ever made.",
+      "tracklist": [
+        {
+          "title": "Sammie",
+          "source": "https://2psy.net/dist/music/2psy/invader/01-Sammie.mp3"
+        },
+        {
+          "title": "Assembly Dub",
+          "source": "https://2psy.net/dist/music/2psy/invader/02-Assembly-Dub.mp3"
+        },
+        {
+          "title": "Penant",
+          "source": "https://2psy.net/dist/music/2psy/invader/03-Penant.mp3"
+        },
+        {
+          "title": "Monolith",
+          "source": "https://2psy.net/dist/music/2psy/invader/04-Monolith.mp3"
+        },
+        {
+          "title": "Invader Pt. 1",
+          "source": "https://2psy.net/dist/music/2psy/invader/05-Invader-Pt-1.mp3"
+        },
+        {
+          "title": "Invader Pt. 2",
+          "source": "https://2psy.net/dist/music/2psy/invader/06-Invader-Pt-2.mp3"
+        },
+        {
+          "title": "Constancy",
+          "source": "https://2psy.net/dist/music/2psy/invader/07-Constancy.mp3"
+        },
+        {
+          "title": "Song P",
+          "source": "https://2psy.net/dist/music/2psy/invader/08-Song-P.mp3"
+        }
+      ]
+    },
+    {
+      "title": "Pet Sounds: Part II",
+      "caption": "  This is my indie rock band, songs by myself and the venerable Zhock Doosay.",
+      "tracklist": [
+        {
+          "title": "Carpal Tunnel",
+          "source": "https://2psy.net/dist/music/notd/pet-sounds-pt-ii/01-carpal-tunnel.mp3"
+        },
+        {
+          "title": "Dying To Be Stung",
+          "source": "https://2psy.net/dist/music/notd/pet-sounds-pt-ii/02-dying-to-be-stung.mp3"
+        },
+        {
+          "title": "I Got Lazy",
+          "source": "https://2psy.net/dist/music/notd/pet-sounds-pt-ii/03-i-got-lazy.mp3"
+        },
+        {
+          "title": "She Is Waiting In The Air",
+          "source": "https://2psy.net/dist/music/notd/pet-sounds-pt-ii/04-she-is-waiting-in-the-air.mp3"
+        },
+        {
+          "title": "Be Still",
+          "source": "https://2psy.net/dist/music/notd/pet-sounds-pt-ii/05-be-still.mp3"
+        },
+        {
+          "title": "Radar",
+          "source": "https://2psy.net/dist/music/notd/pet-sounds-pt-ii/06-radar.mp3"
+        },
+        {
+          "title": "Bash The Brain (Against The Wall)",
+          "source": "https://2psy.net/dist/music/notd/pet-sounds-pt-ii/07-bash-the-brain-against-the-wall.mp3"
+        },
+        {
+          "title": "To Save A Friend",
+          "source": "https://2psy.net/dist/music/notd/pet-sounds-pt-ii/08-to-save-a-friend.mp3"
+        }
+      ]
+    }
+  ]
