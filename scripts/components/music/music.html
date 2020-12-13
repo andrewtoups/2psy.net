@@ -1,4 +1,29 @@
 <article>
     <h2>Music</h2>
-    <!-- for each: album in albums -->
+
+    <!-- ko if: albums().length -->
+    <section data-bind="foreach: albums" class="music-album">
+
+        <h3 data-bind="text: title" class="album-title"></h3>
+        <p data-bind="html: caption" class="album-caption"></p>
+
+        <!-- ko if: tracklist.length > 1 -->
+        <ol data-bind="foreach: tracklist" class="music-tracklist">
+            <li class="music-song">
+                <h5 data-bind="text: title" class="song-name">song.title</h5>
+                <audio data-bind="attr: {src: source}" controls preload="none"></audio>
+            </li>
+        </ol>
+        <!-- /ko -->
+
+        <!-- ko if: tracklist.length === 1 -->
+        <div class="music-song">
+            <h5 data-bind="text: tracklist[0].title" class="song-name">song.title</h5>
+            <audio data-bind="attr: {src: tracklist[0].source}" controls preload="none"></audio>
+        </div>
+        <!-- /ko -->
+
+      </section>
+    <!-- /ko -->
+
 </article>
