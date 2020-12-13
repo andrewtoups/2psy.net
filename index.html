@@ -9,245 +9,44 @@
     <meta property="og:image:height" content="278"/>
     <title>2psy.net</title>
     <link rel="stylesheet" href="dist/styles/main.min.css" type="text/css">
+    <script src="scripts/vendor/domready.js"></script>
   </head>
-  <body class="splash">
+  <body class="splash" data-bind="transitionStep: body">
 
-    <div id="page">
-      <header>
-        <h1>
-          <a class="logo greeting" data-content="💋 2psy.net 💋" href="#home">
-            💋 2psy.net 💋
-          </a>
-        </h1>
-      </header>
-    </div>
+    <!-- ko if: ready -->
+    <!-- ko component: 'splash' -->
+    <!-- /ko -->
+    <!-- /ko -->
 
+    <!-- ko if: admin -->
+    <style>
+      #debugWidget {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        opacity: .45;
+        background-color: white;
+        z-index: 1000000;
+        font-family: monospace;
+      }
+      #debugWidget:hover {
+        opacity: 1;
+      }
+      #debugWidget input {
+        cursor: pointer;
+      }
+    </style>
+    <fieldset id="debugWidget">
+      <label>Debug</label>
+      <input type="checkbox" data-bind="checked: debug" />
+    </fieldset>
+    <!-- /ko -->
 
-<!--
-!!!!!!!!!
-TEMPLATES
-!!!!!!!!!
- -->
-    <script id="home-nav" type="text/x-handlebars-template">
-      <nav>
-        <ul>
-          <li><a href="#me">Me</a></li>
-          <li><a href="#music">Music</a></li>
-          <li><a href="#work">Work</a></li>
-        </ul>
-      </nav>
-    </script>
-    <script id="home-aside" type="text/x-handlebars-template">
-      <aside class="virginia-stripes">
-      </aside>
-    </script>
-    <script id="home-content-area" type="text/x-handlebars-template">
-      <main class="content-area">
-        <h1 class="slim-logo">2psy</h1>
-      </main>
-    </script>
-    <script id="me" type="text/x-handlebars-template">
-      <div class="scroll-mask">
-        <article>
-          <h2>About me</h2>
-          <p>
-            I'm Andrew Toups. I'm a karaoke host and I love programming web pages!
-          </p>
-          <p>
-            Please let me design and build your web site!
-          </p>
-          <h3>Contact</h3>
-          <p>
-            <ul>
-              <li><a target="_blank" href="mailto:mistertoups@gmail.com">mistertoups@gmail.com</a></li>
-              <li><a target="_blank" href="https://www.facebook.com/mistertoups">fb</a></li>
-              <li><a target="_blank" href="https://www.instagram.com/andonuts/">ig</a></li>
-              <li><a target="_blank" href="https://github.com/andrewtoups">github</a></li>
-            </ul>
-          </p>
-        </article>
-      </div>
-    </script>
-    <script id="music" type="text/x-handlebars-template">
-      <div class="scroll-mask">
-        <article>
-          <h2>Music</h2>
-          <section class="music-album">
-            <h3 class="album-title">Death of the Corpse Wizard Soundtrack</h3>
-            <p class="album-caption">
-              Music for <a target="_blank" href="https://featurecreeps.itch.io/corpsewizard">Death of the Corpse Wizard</a>, an ios/android/desktop roguelike <a target="_blank" href="http://procyonic.org">my brother</a> made.
-            </p>
-            <div class="music-song">
-              <h5 class="song-name">Theme From Death of the Corpse Wizard</h5>
-              <audio src="dist/music/corpse-wizard-theme.mp3" controls preload="none"></audio>
-            </div>
-          </section>
-          <section class="music-album">
-            <h3 class="album-title">10x8 Soundtrack</h3>
-            <p class="album-caption">
-              Music for <a href="http://actionbutton.com/10x8/" target="_blank">Action Button's Ten By Eight</a> for the PS Vita.
-            </p>
-            <ol class="music-tracklist">
-              <li class="music-song">
-                <h5 class="song-name">10xMenu</h5>
-                <audio src="dist/music/2psy/ten-by-eight/01-10xmenu.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Zenx8</h5>
-                <audio src="dist/music/2psy/ten-by-eight/02-zenx8.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">10xEndless</h5>
-                <audio src="dist/music/2psy/ten-by-eight/03-10xendless.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">10xInterlude</h5>
-                <audio src="dist/music/2psy/ten-by-eight/04-10xinterlude.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Mainx8</h5>
-                <audio src="dist/music/2psy/ten-by-eight/05-mainx8.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Chateau of the Solipsus</h5>
-                <audio src="dist/music/2psy/ten-by-eight/06-chateau-of-the-solipsus.mp3" controls preload="none"></audio>
-              </li>
-            </ol>
-          </section>
-          <section class="music-album">
-            <h3 class="album-title">Invader Soundtrack</h3>
-            <p class="album-caption">
-              Music for <a href="https://w.itch.io/" target="_blank">Anna Anthropy's</a> Invader, which sadly does not seem to be hosted online anymore. This is the first soundtrack I ever made.
-            </p>
-            <ol class="music-tracklist">
-              <li class="music-song">
-                <h5 class="song-name">Sammie</h5>
-                <audio src="dist/music/2psy/invader/01-Sammie.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Assembly Dub</h5>
-                <audio src="dist/music/2psy/invader/02-Assembly-Dub.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Penant</h5>
-                <audio src="dist/music/2psy/invader/03-Penant.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Monolith</h5>
-                <audio src="dist/music/2psy/invader/04-Monolith.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Invader Pt. 1</h5>
-                <audio src="dist/music/2psy/invader/05-Invader-Pt-1.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Invader Pt. 2</h5>
-                <audio src="dist/music/2psy/invader/06-Invader-Pt-2.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Constancy</h5>
-                <audio src="dist/music/2psy/invader/07-Constancy.mp3" controls preload="none"></audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Song P</h5>
-                <audio src="dist/music/2psy/invader/08-Song-P.mp3" controls preload="none"></audio>
-              </li>
-            </ol>
-          </section>
-          <section class="music-album">
-            <h3 class="album-title">Pet Sounds: Part II</h3>
-            <h4 class="artist-name">Nicest of the Damned</h4>
-            <p class="album-caption">
-              This is my indie rock band, songs by myself and the venerable Zhock Doosay.
-            </p>
-            <ol class="music-tracklist">
-              <li class="music-song">
-                <h5 class="song-name">Carpal Tunnel</h5>
-                <audio src="dist/music/notd/pet-sounds-pt-ii/01-carpal-tunnel.mp3" controls preload="none">
-                  <span class="warning"></span>
-                </audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Dying To Be Stung</h5>
-                <audio src="dist/music/notd/pet-sounds-pt-ii/02-dying-to-be-stung.mp3" controls preload="none">
-                  <span class="warning"></span>
-                </audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">I Got Lazy</h5>
-                <audio src="dist/music/notd/pet-sounds-pt-ii/03-i-got-lazy.mp3" controls preload="none">
-                  <span class="warning"></span>
-                </audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">She Is Waiting In The Air</h5>
-                <audio src="dist/music/notd/pet-sounds-pt-ii/04-she-is-waiting-in-the-air.mp3" controls preload="none">
-                  <span class="warning"></span>
-                </audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Be Still</h5>
-                <audio src="dist/music/notd/pet-sounds-pt-ii/05-be-still.mp3" controls preload="none">
-                  <span class="warning"></span>
-                </audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Radar</h5>
-                <audio src="dist/music/notd/pet-sounds-pt-ii/06-radar.mp3" controls preload="none">
-                  <span class="warning"></span>
-                </audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">Bash The Brain (Against The Wall)</h5>
-                <audio src="dist/music/notd/pet-sounds-pt-ii/07-bash-the-brain-against-the-wall.mp3" controls preload="none">
-                  <span class="warning"></span>
-                </audio>
-              </li>
-              <li class="music-song">
-                <h5 class="song-name">To Save A Friend</h5>
-                <audio src="dist/music/notd/pet-sounds-pt-ii/08-to-save-a-friend.mp3" controls preload="none">
-                  <span class="warning"></span>
-                </audio>
-              </li>
-            </ol>
-          </section>
-        </article>
-      </div>
-    </script>
-    <script id="work" type="text/x-handlebars-template">
-      <div class="scroll-mask">
-        <article>
-          <h2>Work</h2>
-          <ul>
-            <li>
-              <h3><a href="http://jamestancill.com" target="_blank">jamestancill.com</a></h3>
-              <p>Portfolio site built on a customized wordpress theme</p>
-            </li>
-            <li>
-              <p>
-                More coming soon... In the meantime, check out my <a href="https://github.com/andrewtoups">Github</a> page.
-              </p>
-            </li>
-          </ul>
-        </article>
-      </div>
-    </script>
-    <script id="audio-player" type="text/x-handlebars-template">
-      <div class="v-slim-player">
-        <span class="v-slim-play">►</span>
-        <span class="v-slim-track">
-          <span class="v-slim-dot">◌</span>
-        </span>
-      </div>
-    </script>
+    <!-- ko if: registry().includes('debugOverlay')-->
+    <!-- ko component: 'debugOverlay' -->
+    <!-- /ko -->
+    <!-- /ko -->
 
-
-<!--
-!!!!!!!
-SCRIPTS
-!!!!!!!
--->
-    <!-- <script src="dist/js/main.min.js"></script> -->
-    <script src="dist/js/main.js"></script>
+    <script async data-main="rConfig" src="scripts/vendor/require.js"></script>
   </body>
 </html>
