@@ -12,7 +12,7 @@ define(['ko', 'utils/transitionStep'], function(ko, transitionStep){
             class: 'splash',
             timeout: 0
         }]);
-        self.admin = ko.observable(true);
+        self.admin = ko.observable(false);
         self.debug = ko.observable(false);
         self.debug.subscribe(newValue => {
             if (newValue) self.loadComponent('debugOverlay');
