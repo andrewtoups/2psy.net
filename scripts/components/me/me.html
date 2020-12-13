@@ -8,11 +8,8 @@
   </p>
   <h3>Contact</h3>
   <p>
-    <ul>
-      <li><a target="_blank" href="mailto:mistertoups@gmail.com">mistertoups@gmail.com</a></li>
-      <li><a target="_blank" href="https://www.facebook.com/mistertoups">fb</a></li>
-      <li><a target="_blank" href="https://www.instagram.com/andonuts/">ig</a></li>
-      <li><a target="_blank" href="https://github.com/andrewtoups">github</a></li>
+    <ul data-bind="foreach: contactLinks">
+      <li><a data-bind="attr: {href: url}, text: label" target="_blank"></a></li>
     </ul>
   </p>
 </article>
