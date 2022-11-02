@@ -1,12 +1,22 @@
 [
     {
-        "title": "jamestancill.com",
-        "url": "http://jamestancill.com",
-        "caption": "Portfolio site built on a customized wordpress theme"
+        "title": "orb.church",
+        "url": "http://orb.church",
+        "caption": "Calculates a user's astrological chart using a custom implementation of the <a href='https://www.astro.com/swisseph/swephinfo_e.htm' target='_blank'>Swiss Ephemeris</a>, and then generates a poem based upon the user's placements, using lines written by nationally renowned poet <a href='https://www.dylankrieger.com/' target='_blank'>Dylan Krieger</a>. Each poem gets a unique, algorithmically-generated selection of illustrations by <a href='https://saltedteeth.com/' target='_blank'>Chris Payne</a>, with custom layouts for each possible combination."
+    },
+    {
+        "title": "Slemco.com",
+        "url": "http://slemco.com",
+        "caption": "Informational site for a local power cooperative using a highly customized Wordpress theme as specified by the client. Built on the WPBakery/Visual Composer plugin."
     },
     {
         "title": "selectbuttons",
         "url": "http://selectbutton.org",
         "caption": "CSS select buttons. Updated sporadically. Sister site to <a href='https://selectbutton.net'>selectbutton.net</a>"
+    },
+    {
+        "title": "jamestancill.com",
+        "url": "http://jamestancill.com",
+        "caption": "Portfolio site built on a customized wordpress theme"
     }
 ]
